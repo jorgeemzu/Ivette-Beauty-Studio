@@ -6,18 +6,40 @@
 	box-sizing: border-box;
 }
 
+body {
+	font-size: 16px;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: var(--white);
+	color: var(--black);
+}
+
+:root {
+	--black: #232323;
+	--white: #e8e8e8;
+}
+
 img {
 	max-width: 100%;
 }
 
 nav {
 	padding: 2em 0;
+	background-color: white;
 }
 
 nav > .container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	background-color: white;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: clamp(3rem, 4vw, 3.2rem);
 }
 
 .container {
@@ -32,7 +54,7 @@ nav > .container {
 
 .hamburger {
 	position: relative;
-	background-color: black;
+	background-color: var(--black);
 	width: 18px;
 	height: 2px;
 }
@@ -41,7 +63,7 @@ nav > .container {
 .hamburger::after {
 	position: absolute;
 	content: '';
-	background-color: black;
+	background-color: var(--black);
 	width: 18px;
 	height: 2px;
 }
@@ -55,12 +77,111 @@ nav > .container {
 }
 
 .nav__menu--mobile {
-	max-height: 1000px;
-
+	max-height: 0;
+	padding-bottom: 1em;
 	transition: max-height 2s ease-in;
+	background-color: white;
 }
 
-.nav__menu--mobile:hover {
-	max-height: 0;
-	transition: max-height 2s ease-in;
+.show__menu {
+	max-height: 500px;
+	transition: max-height 2s ease;
+}
+
+.nav__menu--item {
+	padding: 1em 0;
+}
+
+.nav__menu--mobile {
+	text-align: center;
+}
+
+.nav__menu--item a {
+	color: var(--black);
+}
+
+.nav__menu--item + .nav__menu--item {
+	margin-top: 1.5em;
+}
+
+.book {
+	padding: 1em 0.5em;
+	background-color: var(--black);
+	display: inline-block;
+	margin-top: 4em;
+}
+
+.book a {
+	color: white;
+}
+
+.slider__container {
+	position: relative;
+	z-index: 10;
+}
+
+.slide {
+	height: 80vh;
+	padding: 4em 0;
+}
+
+.slide1 {
+	background-image: url('images/hero\ mobile.png');
+	background-size: cover;
+	background-position: top;
+}
+
+.btn__black,
+.btn__white {
+	padding: 1em 0.8em;
+	background-color: var(--black);
+	display: inline-block;
+	margin-top: 2em;
+}
+
+.btn__black a {
+	color: white;
+}
+
+.btn__white {
+	padding: 0.85em;
+	background-color: transparent;
+	border: solid 2px var(--black);
+}
+
+.btn__white a {
+	color: var(--black);
+}
+
+.btn__black + .btn__white {
+	margin-left: 1em;
+}
+
+.slider__btn {
+	position: absolute;
+	bottom: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+}
+
+.slider__btn--left,
+.slider__btn--right {
+	background-color: var(--black);
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	padding: 0.4em;
+}
+
+.slider__btn--left svg,
+.slider__btn--right svg {
+	fill: white;
+}
+
+.slider__btn--left {
+	transform: rotate(180deg);
+	margin-right: 1em;
 }
