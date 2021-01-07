@@ -16,6 +16,8 @@ body {
 :root {
 	--black: #232323;
 	--white: #e8e8e8;
+	--overlay: rgba(35, 35, 35, 0.57);
+	--marginSection: 8em;
 }
 
 img {
@@ -40,6 +42,20 @@ a {
 
 h1 {
 	font-size: clamp(3rem, 4vw, 3.2rem);
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 2em;
+	font-size: clamp(2rem, 2vw, 3rem);
+}
+
+main {
+	margin: var(--marginSection) 0;
+}
+
+p {
+	font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 .container {
@@ -78,7 +94,7 @@ h1 {
 
 .nav__menu--mobile {
 	max-height: 0;
-	padding-bottom: 1em;
+	/* padding-bottom: 1em; */
 	transition: max-height 2s ease-in;
 	background-color: white;
 }
@@ -86,6 +102,7 @@ h1 {
 .show__menu {
 	max-height: 500px;
 	transition: max-height 2s ease;
+	/* padding-bottom: 2em; */
 }
 
 .nav__menu--item {
@@ -184,4 +201,114 @@ h1 {
 .slider__btn--left {
 	transform: rotate(180deg);
 	margin-right: 1em;
+}
+
+/* .about__text {
+	margin: 3em 0;
+} */
+
+/* .about__text,
+.about__img {
+	width: clamp(250px, 40vw, 400px);
+} */
+
+/* .about .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+} */
+
+.about__grid {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	gap: 2em;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.prices__section {
+	margin: var(--marginSection) 0;
+}
+
+.prices {
+	background-image: url('images/srvices\ bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 3em;
+}
+
+.overlay {
+	background-color: var(--overlay);
+	padding: 3em 0;
+}
+
+.prices__grid {
+	display: grid;
+
+	grid-gap: 3rem;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	width: 100%;
+}
+
+.price {
+	background-color: var(--black);
+	padding: 2em 1em;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	/* width: clamp(200px, 70vw, 230px); */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.price p {
+	color: var(--white);
+	/* width: 90%;
+	margin: 0 auto; */
+	text-align: center;
+}
+
+.more {
+	background-color: var(--white);
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	top: 0;
+	left: -100%;
+	transition: 1s all ease;
+}
+
+.more a {
+	color: var(--black);
+	font-weight: 600;
+}
+
+.price:hover .more {
+	left: 0;
+}
+
+.frase__section {
+	margin: var(--marginSection) 0;
+}
+
+.frase {
+	background-color: var(--black);
+	padding: 3em 1em;
+	text-align: center;
+}
+
+.frase h2 {
+	color: var(--white);
+	font-weight: 200;
+	margin: 0;
+}
+
+@media screen and (min-width: (800px)) {
 }
