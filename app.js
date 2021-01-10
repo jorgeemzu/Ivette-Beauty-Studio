@@ -3,24 +3,30 @@ const hamburger = document.querySelector('.hamburger')
 const slides = document.querySelectorAll('.slide');
 const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
+const testimonial = document.querySelectorAll('.testimonial')
+const testimonialNext = document.querySelector('.testimonial__btn--right')
+const testimonialPrev = document.querySelector('.testimonial__btn--left')
 
 
 
 
 hamburger.addEventListener('click', showMenu);
 
-
 function showMenu(){
     navMenu.classList.toggle('show__menu')
 
 }
 
+//carrusel para la seccion del hero
 
 slides.forEach((slide, index) =>{
     slide.style.left = `${index * 100}%`
 } )
 
+
+
 let counter = 0;
+
 
 btnLeft.addEventListener('click', () => {
     counter--;
@@ -31,6 +37,9 @@ btnRight.addEventListener('click', () => {
     counter++;
     carrusel();
 });
+
+
+
 
 function carrusel(){
 
@@ -45,14 +54,55 @@ function carrusel(){
 
     slides.forEach(slide => {
         slide.style.transform = `translateX(-${counter * 100}%)`
-        console.log(counter)
+        
     })
+}
+
+//carrusel testimonios
+
+testimonial.forEach((test, index) => {
+    test.style.left = `${index * 100}%`;
+})
+
+
+let testimonialCounter = 0;
+
+
+testimonialNext.addEventListener('click', () =>{
+    testimonialCounter++;
+    slideTestimonials()
+})
+
+testimonialPrev.addEventListener('click', () =>{
+    testimonialCounter--;
+    slideTestimonials()
+})
+
+
+//carrusel de los testimonios
+function slideTestimonials(){
+
+    if(testimonialCounter === testimonial.length){
+        testimonialCounter = 0;
+    }
+
+    if(testimonialCounter < 0){
+        testimonialCounter = testimonial.length -1
+    }
+
+
+    testimonial.forEach(slide => {
+        slide.style.transform = `translateX(-${testimonialCounter * 100}%)`
+        console.log(testimonialCounter * 100)
+    })
+
 }
 
 function slideShow(){
         carrusel()
         counter++;
-        console.log('work')
+        slideTestimonials()
+        testimonialCounter++
 }
 
-setInterval(slideShow,5000);
+ setInterval(slideShow,5000);
