@@ -638,6 +638,8 @@ footer svg {
 
 	.hero__menu {
 		width: clamp(300px, 25vw, 500px);
+		transform: scale(1);
+		position: relative;
 	}
 
 	.hero__menu ul {
