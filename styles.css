@@ -51,7 +51,8 @@ h2 {
 }
 
 main {
-	margin: var(--marginSection) 0;
+	/* margin: var(--marginSection) 0; */
+	margin-top: var(--marginSection);
 }
 
 p,
@@ -59,10 +60,18 @@ label {
 	font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
+ul {
+	list-style: none;
+}
+
 .container {
 	width: 80%;
 	max-width: 1100px;
 	margin: 0 auto;
+}
+
+.container.center {
+	position: relative;
 }
 
 .logo {
@@ -96,14 +105,20 @@ label {
 .nav__menu--mobile {
 	max-height: 0;
 	/* padding-bottom: 1em; */
-	transition: max-height 2s ease-in;
+	transition: max-height 1s ease;
 	background-color: white;
+	overflow: hidden;
 }
 
 .show__menu {
 	max-height: 500px;
 	transition: max-height 2s ease;
 	/* padding-bottom: 2em; */
+}
+
+.hero__menu {
+	position: absolute;
+	transform: scale(0);
 }
 
 .nav__menu--item {
@@ -133,6 +148,21 @@ label {
 	color: white;
 }
 
+.social__menu--container {
+	display: flex;
+	width: 70%;
+	max-width: 300px;
+	align-items: center;
+	justify-content: space-between;
+	margin: 5em auto;
+	padding-bottom: 2em;
+}
+
+.social__menu svg {
+	fill: var(--black);
+	width: 30px;
+}
+
 .slider__container {
 	position: relative;
 	z-index: 10;
@@ -150,16 +180,20 @@ label {
 }
 
 .slide1 {
-	background-image: url('images/hero\ mobile.png');
+	background-image: url('images/iPad\ mini\ s1.png');
 	background-size: cover;
-	background-position: top;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	/* background-position-x: right; */
 	transition: 1s all ease;
 }
 
 .slide2 {
-	background-image: url('images/slide2.png');
+	background-image: url('images/iPad\ mini\ -\ 1.png');
 	background-size: cover;
-	background-position: top;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-position-x: right;
 
 	transition: 1s all ease;
 }
@@ -170,10 +204,20 @@ label {
 
 .slide2 .btn__black {
 	background-color: var(--white);
+	border: none;
+	transition: 0.5s all ease;
 }
 
 .slide2 .btn__black a {
 	color: var(--black);
+}
+
+.slide2 .btn__black:hover {
+	background-color: transparent;
+}
+
+.slide2 .btn__black:hover a {
+	color: var(--white);
 }
 
 .slide2 .btn__white {
@@ -182,6 +226,14 @@ label {
 
 .slide2 .btn__white a {
 	color: var(--white);
+}
+
+.slide2 .btn__white:hover {
+	background-color: var(--white);
+}
+
+.slide2 .btn__white:hover a {
+	color: var(--black);
 }
 
 /* .slide {
@@ -194,20 +246,39 @@ label {
 	background-color: var(--black);
 	display: inline-block;
 	margin-top: 2em;
+	border: solid 2px var(--black);
+	transition: all 1s ease;
 }
 
 .btn__black a {
 	color: white;
+	transition: all 1s ease;
+}
+
+.btn__black:hover {
+	background-color: transparent;
+}
+
+.btn__black:hover a {
+	color: var(--black);
 }
 
 .btn__white {
-	padding: 0.85em;
+	/* padding: 0.85em; */
 	background-color: transparent;
 	border: solid 2px var(--black);
 }
 
 .btn__white a {
 	color: var(--black);
+}
+
+.btn__white:hover {
+	background-color: var(--black);
+}
+
+.btn__white:hover a {
+	color: var(--white);
 }
 
 .btn__black + .btn__white {
@@ -220,7 +291,7 @@ label {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
+	cursor: pointer;
 	width: 100%;
 }
 
@@ -241,6 +312,35 @@ label {
 .slider__btn--left {
 	transform: rotate(180deg);
 	margin-right: 1em;
+}
+
+.hero__social {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 20%;
+	max-width: 200px;
+	transform: scale(0);
+}
+
+.hero__social ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* .hero__social a {
+	width: 40px;
+
+	background-color: var(--white);
+
+	padding: 1em;
+	border-radius: 50%;
+} */
+
+.hero__social svg {
+	fill: var(--black);
+	width: 30px;
 }
 
 /* .about__text {
@@ -404,6 +504,7 @@ label {
 .book__grid {
 	display: grid;
 	justify-items: center;
+	align-items: center;
 	gap: 5em;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
@@ -451,7 +552,7 @@ button.btn__black {
 .testimonials {
 	background-color: var(--black);
 	padding: 4em 0;
-	margin: var(--marginSection) 0;
+	margin-top: var(--marginSection);
 }
 
 .testimonials h2,
@@ -467,7 +568,7 @@ button.btn__black {
 }
 
 .testimonial__container {
-	height: 30vh;
+	height: 40vh;
 }
 
 .testimonial__btn {
@@ -506,5 +607,78 @@ button.btn__black {
 	width: 40px;
 }
 
-@media screen and (min-width: (800px)) {
+footer {
+	background-color: var(--black);
+	padding: 4em 0;
+}
+
+footer ul {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+}
+
+footer svg {
+	fill: var(--white);
+	width: 30px;
+}
+
+@media screen and (min-width: 900px) {
+	h1 {
+		font-size: clamp(4rem, 4vw, 5rem);
+	}
+
+	.nav__menu--mobile,
+	.hamburger {
+		position: absolute;
+		transform: scale(0);
+	}
+
+	.hero__menu {
+		width: clamp(300px, 25vw, 500px);
+	}
+
+	.hero__menu ul {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.nav__menu--item + .nav__menu--item {
+		margin: 0;
+	}
+
+	.slide1 {
+		background-image: url('images/hero.png');
+		background-position-x: right;
+	}
+
+	.container.center {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+
+	.hero__social {
+		transform: scale(1);
+	}
+
+	.about__grid {
+		gap: 10em;
+	}
+
+	label {
+		text-align: left;
+	}
+
+	input {
+		margin: 0;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.slide1 {
+		background-size: contain;
+	}
 }
