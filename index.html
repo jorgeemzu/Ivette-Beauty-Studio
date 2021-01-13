@@ -6,12 +6,15 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="app.js" defer></script>
+    <script src="slider.js" defer></script>
+
     <title>Ivette Beauty Studio</title>
 </head>
 <body>
         <header>
-            <nav>
+            <nav class="left" >
                 <div class="container">
                     <div class="logo">
                         <img src="images/logo ivette blac.png" alt="Logo_Ivette_Eyebrows">
@@ -21,6 +24,7 @@
                         <ul>
                             <li class="nav__menu--item" ><a href="">Inicio</a></li>
                             <li class="nav__menu--item" ><a href="">About</a></li>
+                            <li class="nav__menu--item" ><a href="services.html">Services</a></li>
                             <li class="nav__menu--item" ><a href="">Contact</a></li>
                             <li class="nav__menu--item book" ><a href="">Book Now</a></li>
                         </ul>
@@ -321,11 +325,11 @@
         </header>
 
         <main>
-            <section class="about" >
+            <section class="about" id="about">
                 
                 <div class="container">
                     <div class="about__grid">
-                        <div class="about__text">
+                        <div class="about__text left">
                             <h2>Meet Ivette</h2>
                             <p>My name is Ivette Torres, I am a certified Permanent Makeup Artist with a 
                                 master in Micropigmentation.  I have been working in the field for the past 3 years.  
@@ -337,7 +341,7 @@
                                    <a href="">Learn More</a>
                                </div>
                         </div>
-                        <div class="about__img">
+                        <div class="about__img right">
                             <img src="images/ivette.jpeg" alt="Ivette_MicroBlading_eyebrows">
                         </div>
                     </div>
@@ -349,69 +353,69 @@
             </section>
 
             <section class="prices__section" >
-                <h2 class="container">¿What van we do for your EyeBrows?</h2>
+                <h2 class="container left">¿What van we do for your EyeBrows?</h2>
                 <div class="prices">
                     <div class="overlay">
                         <div class="container">
                             <div class="prices__grid">
                                 
-                                <div class="price">
+                                <div class="price left">
                                     <p>3D MicroBlading</p>
                                     <div class="more" >
-                                        <a href="">Learn More</a>
+                                        <a href="services.html#microblading">Learn More</a>
                                     </div>
                                 </div>
 
-                                <div class="price">
+                                <div class="price left">
                                     <p>3D MicroBlading with Ombre Technique</p>
                                     <div class="more" >
-                                        <a href="">Learn More</a>
+                                        <a href="services.html#microblading">Learn More</a>
                                     </div>
                                 </div>
 
-                                <div class="price">
+                                <div class="price left">
                                     <p>Top Eyeliner</p>
                                     <div class="more" >
                                         <a href="">Learn More</a>
                                     </div>
                                 </div>
 
-                                <div class="price">
+                                <div class="price left">
                                     <p>Bottom Eyeliner</p>
                                     <div class="more" >
                                         <a href="">Learn More</a>
                                     </div>
                                 </div>
 
-                                <div class="price">
+                                <div class="price left">
                                     <p>Lipliner</p>
                                     <div class="more" >
                                         <a href="">Learn More</a>
                                     </div>
                                 </div>
 
-                                <div class="price">
+                                <div class="price left">
                                     <p>Full Lips</p>
                                     <div class="more" >
                                         <a href="">Learn More</a>
                                     </div>
                                 </div>
 
-                                <div class="price">
+                                <div class="price left">
                                     <p>Beauty Marks (1-3)</p>
                                     <div class="more" >
                                         <a href="">Learn More</a>
                                     </div>
                                 </div>
 
-                                <div class="price">
+                                <div class="price left">
                                     <p>Freckling</p>
                                     <div class="more" >
                                         <a href="">Learn More</a>
                                     </div>
                                 </div>
 
-                                <div class="price">
+                                <div class="price left">
                                     <p>Color Correction</p>
                                     <div class="more" >
                                         <a href="">Learn More</a>
@@ -420,6 +424,11 @@
                                 
                                
                             </div>
+
+                            <div class="btn__white services left">
+                                <a class="" href="services.html">Learn More</a>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -427,7 +436,7 @@
 
             <section class="frase__section" >
                 <div class="container">
-                    <div class="frase">
+                    <div class="frase left">
                         <h2>The eyebrows are the authentic frame of the face, they are the secret of a look with personality. 
                             Eyebrows have the power to completely change the look of the face by correcting minor flaws.</h2>
                     </div>
@@ -435,27 +444,27 @@
             </section>
 
             <section class="logros__section" >
-                <h2 class="container" >Our Work</h2>
+                <h2 class="container left" >Our Work</h2>
                 <div class="flex">
-                    <img src="images/cliente1.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio">
-                    <img src="images/cliente2.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio">
-                    <img src="images/cliente3.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio">
-                    <img src="images/cliente4.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio">
+                    <img class="stagger__logros" src="images/cliente1.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio">
+                    <img class="stagger__logros" src="images/cliente2.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio">
+                    <img class="stagger__logros" src="images/cliente3.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio">
+                    <img class="stagger__logros" src="images/cliente4.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio">
                     <!-- <img src="images/cliente5.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio"> -->
-                    <img src="images/cliente6.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio">
-                    <img src="images/cliente7.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio">
-                    <img src="images/cliente8.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio">
+                    <img class="stagger__logros" src="images/cliente6.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio">
+                    <img class="stagger__logros" src="images/cliente7.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio">
+                    <img class="stagger__logros" src="images/cliente8.jpeg" alt="Cliente_Cejas_Eyebrows_microblading_ivette_beauty_studio">
                 </div>
 
                 <div class="logros">
                     <div class="container">
                         <div class="logros__container">
-                            <div class="logro">
+                            <div class="logro left">
                                 <svg id="Capa_1" enable-background="new 0 0 513.398 513.398"  viewBox="0 0 513.398 513.398"  xmlns="http://www.w3.org/2000/svg"><g><path d="m414.315 19.258c-16.336 0-297.195 0-315.203 0l-99.112 135.152 257.764 339.73 255.635-339.769zm-273.4 150 72.622 216.961-164.615-216.961zm31.637 0h168.412l-83.628 253.297zm200.006 0h92.098l-164.115 218.127zm26.553-120 66 90h-92.533l-29.531-90zm-87.638 0 29.531 90h-168.582l29.531-90zm-197.159 0h56.064l-29.531 90h-92.533z"/></g></svg>
                                 <p><span>3+</span> Years of Experience</p>
                             </div>
 
-                            <div class="logro">
+                            <div class="logro left ">
                                 <svg xmlns="http://www.w3.org/2000/svg"  version="1.1" viewBox="-55 0 511 511.9999">
                                     <g id="surface1">
                                     <path d="M 335.175781 190.992188 C 335.175781 117.195312 275.136719 57.15625 201.339844 57.15625 C 127.539062 57.15625 67.5 117.195312 67.5 190.992188 C 67.5 264.792969 127.539062 324.832031 201.339844 324.832031 C 275.136719 324.832031 335.175781 264.792969 335.175781 190.992188 Z M 201.339844 309.832031 C 135.8125 309.832031 82.5 256.519531 82.5 190.992188 C 82.5 125.46875 135.8125 72.15625 201.339844 72.15625 C 266.867188 72.15625 320.175781 125.46875 320.175781 190.992188 C 320.175781 256.519531 266.867188 309.832031 201.339844 309.832031 Z M 201.339844 309.832031 " style=" stroke:none;fill-rule:nonzero;;fill-opacity:1;" />
@@ -466,7 +475,7 @@
                                 <p><span>5+</span>Certificates</p>
                             </div>
 
-                            <div class="logro">
+                            <div class="logro left ">
                                 <svg id="Capa_1" enable-background="new 0 0 513.398 513.398"  viewBox="0 0 513.398 513.398"  xmlns="http://www.w3.org/2000/svg"><g><path d="m414.315 19.258c-16.336 0-297.195 0-315.203 0l-99.112 135.152 257.764 339.73 255.635-339.769zm-273.4 150 72.622 216.961-164.615-216.961zm31.637 0h168.412l-83.628 253.297zm200.006 0h92.098l-164.115 218.127zm26.553-120 66 90h-92.533l-29.531-90zm-87.638 0 29.531 90h-168.582l29.531-90zm-197.159 0h56.064l-29.531 90h-92.533z"/></g></svg>
                                 <p><span>100+</span>Happy Clients</p>
                             </div>
@@ -477,16 +486,16 @@
 
             <section class="book_section" >
                 <div class="container">
-                    <h2>Book an Appointment</h2>
+                    <h2 class="left" >Book an Appointment</h2>
                     <div class="book__grid">
-                        <div class="ws">
+                        <div class="ws left">
                             <a href="">
                                 <svg viewBox="0 0 512 512"  xmlns="http://www.w3.org/2000/svg"><path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm5.425781 405.050781c-.003906 0 .003907 0 0 0h-.0625c-25.644531-.011719-50.84375-6.441406-73.222656-18.644531l-81.222656 21.300781 21.738281-79.375c-13.410156-23.226562-20.464844-49.578125-20.453125-76.574219.035156-84.453124 68.769531-153.160156 153.222656-153.160156 40.984375.015625 79.457031 15.96875 108.382813 44.917969 28.929687 28.953125 44.851562 67.4375 44.835937 108.363281-.035156 84.457032-68.777343 153.171875-153.21875 153.171875zm0 0"/><path d="m261.476562 124.46875c-70.246093 0-127.375 57.105469-127.40625 127.300781-.007812 24.054688 6.726563 47.480469 19.472657 67.75l3.027343 4.816407-12.867187 46.980468 48.199219-12.640625 4.652344 2.757813c19.550781 11.601562 41.964843 17.738281 64.816406 17.746094h.050781c70.191406 0 127.320313-57.109376 127.351563-127.308594.011718-34.019532-13.222657-66.003906-37.265626-90.066406-24.042968-24.0625-56.019531-37.324219-90.03125-37.335938zm74.90625 182.035156c-3.191406 8.9375-18.484374 17.097656-25.839843 18.199219-6.597657.984375-14.941407 1.394531-24.113281-1.515625-5.5625-1.765625-12.691407-4.121094-21.828126-8.0625-38.402343-16.578125-63.484374-55.234375-65.398437-57.789062-1.914063-2.554688-15.632813-20.753907-15.632813-39.59375 0-18.835938 9.890626-28.097657 13.398438-31.925782 3.511719-3.832031 7.660156-4.789062 10.210938-4.789062 2.550781 0 5.105468.023437 7.335937.132812 2.351563.117188 5.507813-.894531 8.613281 6.570313 3.191406 7.664062 10.847656 26.5 11.804688 28.414062.957031 1.917969 1.59375 4.152344.320312 6.707031-1.277344 2.554688-5.519531 8.066407-9.570312 13.089844-1.699219 2.105469-3.914063 3.980469-1.679688 7.8125 2.230469 3.828125 9.917969 16.363282 21.296875 26.511719 14.625 13.039063 26.960938 17.078125 30.789063 18.996094 3.824218 1.914062 6.058594 1.59375 8.292968-.957031 2.230469-2.554688 9.570313-11.175782 12.121094-15.007813 2.550782-3.832031 5.105469-3.191406 8.613282-1.914063 3.511718 1.273438 22.332031 10.535157 26.160156 12.449219 3.828125 1.917969 6.378906 2.875 7.335937 4.472657.960938 1.597656.960938 9.257812-2.230469 18.199218zm0 0"/></svg>
                                 <p>+1 (832) 301-2212</p>
                             </a>
                         </div>
 
-                        <div class="contact">
+                        <div class="contact right">
                             <form action="">
                                 
                                 <div class="input">
@@ -516,7 +525,7 @@
 
             <section class="testimonials">
                 <div class="container">
-                    <h2>Testimonials</h2>
+                    <h2 class="left" >Testimonials</h2>
                     <div class="slider__container testimonial__container">
                         <div class="testimonial">
                             <h3>Ivette</h3>
