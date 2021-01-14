@@ -20,6 +20,10 @@ body {
 	--marginSection: 8em;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 img {
 	max-width: 100%;
 }
@@ -506,7 +510,8 @@ ul {
 }
 
 .flex img {
-	width: clamp(150px, 25vw, 337px);
+	/* se cambio el minimo de 150px a 170 */
+	width: clamp(170px, 25vw, 337px);
 	transition: 1s all ease;
 }
 
