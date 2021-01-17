@@ -11,6 +11,7 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 	background-color: var(--white);
 	color: var(--black);
+	/* overflow: hidden; */
 }
 
 :root {
@@ -66,6 +67,25 @@ label {
 
 ul {
 	list-style: none;
+}
+
+.overflow {
+	overflow: hidden;
+}
+
+.animation {
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	z-index: 100;
+	background-color: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 1s ease-in-out;
+	width: 100vw;
+	text-align: center;
 }
 
 .left {
