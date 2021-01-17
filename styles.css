@@ -738,6 +738,7 @@ footer svg {
 	background-image: url('images/female-master-in-white-gloves-determine-eyebrow-contour-min.jpg');
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .hero__services .overlay {
