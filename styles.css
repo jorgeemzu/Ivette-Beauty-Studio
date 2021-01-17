@@ -414,6 +414,18 @@ ul {
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+.about__img {
+	overflow: hidden;
+}
+
+.about__img img {
+	transition: 1s transform ease-in-out;
+}
+
+.about__img img:hover {
+	transform: scale(1.2);
+}
+
 .prices__section {
 	margin: var(--marginSection) 0;
 }
@@ -712,6 +724,20 @@ footer svg {
 .service h2 {
 	margin-bottom: 0.5em;
 	text-align: left;
+}
+
+.healing {
+	text-align: center;
+	margin: var(--marginSection) 0;
+}
+
+.healing h2 {
+	margin: 0;
+}
+
+.healing__img {
+	margin: var(--marginSection) 0;
+	text-align: center;
 }
 
 @media screen and (min-width: 900px) {
