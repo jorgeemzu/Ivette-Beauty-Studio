@@ -537,9 +537,13 @@ ul {
 }
 
 .frase {
-	background-color: var(--black);
+	/* background-color: var(--black); */
 	padding: 3em 1em;
 	text-align: center;
+	background-image: url('images/darkbackground.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .frase h2 {
@@ -571,7 +575,11 @@ ul {
 } */
 
 .logros {
-	background-color: var(--black);
+	/* background-color: var(--black); */
+	background-image: url('images/darkbackground.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 	padding: 4em 0;
 }
 
@@ -646,6 +654,12 @@ button.btn__black {
 	border: none;
 	font-size: clamp(1.5rem, 20px, 3rem);
 	margin-top: 0;
+	border: solid 2px var(--black);
+	cursor: pointer;
+}
+
+button:hover {
+	color: var(--black);
 }
 
 .testimonials {
@@ -778,6 +792,18 @@ footer svg {
 .healing__img {
 	margin: var(--marginSection) 0;
 	text-align: center;
+}
+
+.attr {
+	text-align: center;
+	margin-top: 5em;
+	color: var(--white);
+	font-weight: 200;
+}
+
+.attr a {
+	color: white;
+	font-weight: 400;
 }
 
 @media screen and (min-width: 900px) {
