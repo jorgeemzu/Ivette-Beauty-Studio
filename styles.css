@@ -157,7 +157,7 @@ ul {
 }
 
 .show__menu {
-	max-height: 500px;
+	max-height: 600px;
 	transition: max-height 2s ease;
 	/* padding-bottom: 2em; */
 }
