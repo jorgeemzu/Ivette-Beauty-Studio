@@ -74,4 +74,4 @@ function slideShow() {
   testimonialCounter++;
 }
 
-//   setInterval(slideShow,5000);
+setInterval(slideShow, 5000);
