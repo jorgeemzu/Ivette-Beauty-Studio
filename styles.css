@@ -319,6 +319,14 @@ address {
   transition: 1s all ease;
 }
 
+.slide4 {
+  transition: 1s all ease;
+  background-image: url("images/hero-ivette-mobil.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .btn__black,
 .btn__white {
   padding: 1em 0.8em;
@@ -854,6 +862,11 @@ footer svg {
   .slide3 {
     background-image: url("images/hero2.png");
     background-position-x: right;
+  }
+
+  .slide4 {
+    background-image: url("images/hero-ivette.png");
+    background-size: cover;
   }
 
   .container.center {
